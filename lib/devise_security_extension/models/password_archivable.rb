@@ -31,7 +31,6 @@ module Devise
             dummy.encrypted_password = old_password.encrypted_password
             dummy.password_salt      = old_password.password_salt if dummy.respond_to?(:password_salt)
             return true if dummy.valid_password?(self.password)
-            end
           end
         end
 
